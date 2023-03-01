@@ -1,6 +1,5 @@
 class Product < ApplicationRecord
-  belongs_to :user
-  has_many_attached :photos
+  has_many :inters
+  has_many_attached :photo
 
-  validates :size, :name, :type, :description, :image_url, presence: true
 end
