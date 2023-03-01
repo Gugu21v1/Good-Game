@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root to: "pages#home"
-
-  resources :users, only: ['new', 'create', 'update', 'show', 'delete'] do
+  devise_for :users do
     resources :products
   end
 end

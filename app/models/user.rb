@@ -1,6 +1,10 @@
 class User < ApplicationRecord
-  has_many :inter, dependent: :destroy
-  has_many :products, through: :inter
+  # Include default devise modules. Others available are:
+  has_many :inters, dependent: :destroy
+  has_many :products, through: :inters
 
-  validates :name, :phone, :email, presence: true
+  has_one_attached :photo
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 end
