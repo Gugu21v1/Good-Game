@@ -85,3 +85,7 @@
   <%#<br>
   <%= link_to user.name, user_path(user) %>
 <%# end %>
+<% @users.each do |user| %>
+  <br>
+  <%= link_to user.email, user_path(user) %>
+<% end %>
