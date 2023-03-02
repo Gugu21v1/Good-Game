@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: rgb(56, 56, 56);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 13px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +11,20 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.nav-link {
+  color: white;
+  transition: ease 0.6s all;
+}
+
+.navbar-brand h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  margin: 0;
+}
+
+.nav-link:hover {
+  color: red;
+  scale: 1.1;
 }
