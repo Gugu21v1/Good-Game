@@ -1,2 +1,17 @@
 <h1>Products#show</h1>
 <p>Find me in app/views/products/show.html.erb</p>
+
+<%# <%= @product.name %> %>
+<%# <%= @product.price %> %>
+<%# <%= @product.users_id %> %>
+
+<!-- User é o usuario dono do produto. -->
+<%# <%= @user.name %> %>
+
+
+<%# Isso aqui é para ocultar as coisas de quem não for o dono do produto
+ %><%# <% if policy(@product).edit? %> %>
+  <%# <%= link_to "Delete", delete_path(@product), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> %>
+  <%# <%= link_to "Edit this product", edit_product_path(@product) %> | %>
+<%# <% end %> %>
+<!-- [...] -->

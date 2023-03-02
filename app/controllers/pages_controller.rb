@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
   def home
-    @user = User.all.last
+    @user = current_user
+    @users = User.all
   end
 end
