@@ -2,19 +2,19 @@
 <p>Find me in app/views/users/show.html.erb</p>
 
 <%# Email do usuario dono desta conta %>
-<%# <%= @user.email %>
+ <%= @user.email %>
 
 <br><br>
 <%# Iterando sobre os produtos do usuario %>
-<%# <% @products.each do |product| %>
-  <%# <%= link_to product.name, product_path(product) %>
-  <%# <br> %>
-<%# <% end %>
+<% @products.each do |product| %>
+  <%= link_to product.name, product_path(product) %>
+  <br>
+<% end %>
 
 <br><br>
 
 <%# Verificando se o usuario atual é o dono da conta. %>
-<%# <% if policy(@user).edit? %>
-  <%# <%= link_to "Edit this user", edit_user_registration_path(@user) %>
-  <%# <%= link_to "New Product", new_product_path if policy(User).new? %>
-<%# <% end %>
+<% if policy(@user).edit? %>
+  <%= link_to "Edit this user", edit_user_registration_path(@user) %>
+  <%= link_to "New Product", new_product_path if policy(User).new? %>
+<% end %>
