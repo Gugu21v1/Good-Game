@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
   def show
+    @user = User.find(params[:id])
   end
 
   def new
     @user = User.new
-    raise
   end
 
   def create
@@ -17,12 +17,19 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
   end
 
-  def delete
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+
+    redirect_to user_path(@user), status: :see_other
   end
 
   private
