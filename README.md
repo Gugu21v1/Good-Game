@@ -1,1 +1,6 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+A website to sell consoles and games. Produced using ruby on rails, html, css and javascript!
+TEAM: 
+Donibrazil 
+Vitorllr
+zetohouse 
+Gugu21v1
