@@ -1,7 +1,11 @@
 <div class="luiz-css">
   <div class="container text-center mt-5 card-lg">
     <div class="mb-4">
-      <%= cl_image_tag @user.user_url.key, class:"avatar" %>
+      <% if current_user.user_url.key != nil %>
+        <%= cl_image_tag current_user.user_url.key, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <% else %>
+        <%= image_tag 'profile.png', crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <% end %>
     </div>
     <h3><%= @user.name %></h3>
     <hr>
