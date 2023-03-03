@@ -58,8 +58,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_140205) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "product_url"
-    t.bigint "users_id", null: false
-    t.index ["users_id"], name: "index_products_on_users_id"
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_products_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -80,5 +80,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_140205) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "inters", "products"
   add_foreign_key "inters", "users"
-  add_foreign_key "products", "users", column: "users_id"
+  add_foreign_key "products", "users"
 end
