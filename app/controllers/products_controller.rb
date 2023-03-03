@@ -7,9 +7,9 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @user = User.find(@product.users_id)
+    @user = User.find(@product.user_id)
     authorize @product
-  end
+   end
 
   def new
     @product = Product.new
