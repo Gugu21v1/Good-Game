@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %I[show index]
+
   def index
     @products = policy_scope(Product)
   end
