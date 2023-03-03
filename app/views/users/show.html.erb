@@ -24,18 +24,18 @@
     </div>
   </div>
   <!--
-
 <%# Email do usuario dono desta conta %>
-<%= @user.email %>
-<br>
-<br>
+ <%= @user.email %>
+
+<br><br>
 <%# Iterando sobre os produtos do usuario %>
 <% @products.each do |product| %>
   <%= link_to product.name, product_path(product) %>
   <br>
 <% end %>
-<br>
-<br>
+
+<br><br>
+
 <%# Verificando se o usuario atual é o dono da conta. %>
 <% if policy(@user).edit? %>
   <%= link_to "Edit this user", edit_user_registration_path(@user) %>
