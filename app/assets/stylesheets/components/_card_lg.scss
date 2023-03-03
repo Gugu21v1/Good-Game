@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+
+.card-lg {
+  border-radius: 15px;
+  background: #212121;
+  border: 2px solid grey;
+  padding: 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.border-lg {
+  border-radius: 5px;
+}
+
+
+.card-lg-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #212121;
+  border-radius: 15px;
+  min-width: 330px;
+}
+
+.card-lg-2 {
+  position: relative;
+  width: 280px;
+  min-width: 250px;
+  height: 390px;
+  background: #191919;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-lg-2::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: #ffce00;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+
+.card-lg-2:hover::before {
+  top: -70%;
+  transform: skewY(390deg);
+}
+
+.card-lg-2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.card-lg-2 .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+// .card-lg-2 .imgBox img {
+//     max-width: 100%;
+
+//     transition: .5s;
+// }
+
+// .card:hover .imgBox img {
+//     max-width: 50%;
+
+// }
+
+.card-lg-2 .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.card-lg-2 .contentBox h2 {
+  font-size: 25px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-lg-2 .contentBox .price {
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.card-lg-2 .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #ffce00;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.card-lg-2:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+
+.img-product {
+  height: 200px;
+  width: auto;
+  border-radius: 15px;
+}
