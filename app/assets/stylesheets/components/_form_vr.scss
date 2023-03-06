@@ -5,13 +5,17 @@ $yellow: #FACF39;
   color: black;
   background-color: $yellow;
   padding: 10px;
-  margin: 35px;
+  margin: auto auto;
   border-style: solid;
   border-radius: 125px;
   text-align: left;
   border-color: black;
   font-weight: bold;
 };
+
+.distancia-top {
+  margin-top: 60px;
+}
 
 .login-btn {
   color: black;
@@ -22,14 +26,11 @@ $yellow: #FACF39;
   border-radius: 125px;
   text-align: left;
   border-color: black;
-  font-weight: bold;
+  margin: auto auto;
   text-decoration: none;
 }
 
-
-
 #login-btn{
-
   color: black;
   background-color: $yellow;
   padding: 10px;
@@ -38,7 +39,6 @@ $yellow: #FACF39;
   border-radius: 125px;
   text-align: left;
   border-color: black;
-  font-weight: bold;
   text-decoration: none;
 }
 
@@ -56,6 +56,7 @@ $yellow: #FACF39;
   font-weight: bold;
   border-style: solid
 }
+
 #user_password{
   border-radius: 125px;
   background-color: #FACF39;
@@ -64,6 +65,7 @@ $yellow: #FACF39;
   font-weight: bold;
   border-style: solid
 }
+
 #user_name{
   border-radius: 125px;
   background-color: #FACF39;
@@ -80,8 +82,8 @@ $yellow: #FACF39;
   border-color: black;
   font-weight: bold;
   border-style: solid
-
 }
+
 #user_password_confirmation{
   border-radius: 125px;
   background-color: #FACF39;
@@ -89,5 +91,4 @@ $yellow: #FACF39;
   border-color: black;
   font-weight: bold;
   border-style: solid
-
 }
