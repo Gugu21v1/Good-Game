@@ -26,6 +26,19 @@
   min-width: 330px;
 }
 
+.card-lg-body .a-delete .fa-trash{
+  color: red;
+  position: relative;
+  bottom: 170px;
+  left: 290px;
+  z-index: 2;
+}
+
+.a-delete button {
+  background-color: transparent;
+  border: none;
+}
+
 .card-lg-2 {
   position: relative;
   width: 280px;
@@ -133,4 +146,10 @@
   max-height: 170px;
   width: auto;
   border-radius: 15px;
+}
+
+.form-actions {
+  min-width: 300px;
+  margin: auto auto;
+  text-align: center;
 }
