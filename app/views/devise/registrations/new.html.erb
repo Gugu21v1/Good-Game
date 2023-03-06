@@ -39,7 +39,7 @@
       <br>
       <br>
       <div class="form-actions position-absolute top-100 start-50 translate-middle pb-5">
-        <a id='submit-btn' href="#"><%= f.button :submit, "Sign up" %></a>
+        <%= f.button :submit, "Sign up", id:'submit-btn' %>
         <%= render "devise/shared/links", class: "login-btn" %>
       </div>
     <% end %>
