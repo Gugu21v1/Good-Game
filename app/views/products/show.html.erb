@@ -1,36 +1,26 @@
 <div class="container">
   <h1> <%=@product.name%> </h1>
   <div class ="row">
-     <div class="col-6">
-
-        <h2>Product Photo</h2>
-
-        <%= cl_image_tag(@product.product_url.key,
-      width: 400, height: 300, crop: :fill) %>
-
-   </div>
-
-        <div class="col-6">
-            <p>Product Details</p>
-            <h2><%=@product.price %></h2>
-            <h2></h2>
-
-        </div>
+    <div class="col-6">
+      <h2>Product Photo</h2>
+      <% @product.product_url.each do |image| %>
+        <%= cl_image_tag(image.key, height: 300) %>
+        <br>
+      <% end %>
+    </div>
+    <div class="col-6">
+      <p>Product Details</p>
+      <h2><%=@product.price %></h2>
+      <h2></h2>
+    </div>
   </div>
-
 </div>
-
-
-
-<%# <%= @product.users_id %>
-
+<%# <%= @product.user_id %>
 <!-- User é o usuario dono do produto. -->
 <%# <%= @user.name %>
-
-
 <%# Isso aqui é para ocultar as coisas de quem não for o dono do produto
  %><%# <% if policy(@product).edit? %>
-  <%# <%= link_to "Delete", delete_path(@product), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-  <%# <%= link_to "Edit this product", edit_product_path(@product) %>
+<%# <%= link_to "Delete", delete_path(@product), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%# <%= link_to "Edit this product", edit_product_path(@product) %>
 <%# <% end %>
 <!-- [...] -->
