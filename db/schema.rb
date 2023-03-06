@@ -42,6 +42,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_155727) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "inters", force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_inters_on_product_id"
+    t.index ["user_id"], name: "index_inters_on_user_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.float "price"
@@ -49,9 +58,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_155727) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "product_url"
-    t.bigint "user_id", null: false
+    t.bigint "users_id", null: false
     t.text "details"
-    t.index ["user_id"], name: "index_products_on_user_id"
+    t.index ["users_id"], name: "index_products_on_users_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -70,5 +79,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_155727) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "products", "users"
+  add_foreign_key "inters", "products"
+  add_foreign_key "inters", "users"
+  add_foreign_key "products", "users", column: "users_id"
 end
