@@ -1,13 +1,15 @@
 class ProductsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %I[show index]
+
   def index
     @products = policy_scope(Product)
   end
 
   def show
     @product = Product.find(params[:id])
-    @user = User.find(@product.users_id)
+    @user = User.find(@product.user_id)
     authorize @product
-  end
+   end
 
   def new
     @product = Product.new
@@ -17,7 +19,7 @@ class ProductsController < ApplicationController
   def create
     @user = User.find(current_user.id)
     @product = Product.new(product_params)
-    @product.users_id = current_user.id
+    @product.user_id = current_user.id
     authorize @product
     if @product.save
       redirect_to product_path(@product)
@@ -48,6 +50,6 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :product_url, :description, :price, :users_id)
+    params.require(:product).permit(:name, :details, :description, :price, :console, :user_id, product_url: [])
   end
 end
