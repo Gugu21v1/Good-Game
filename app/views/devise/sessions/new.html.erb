@@ -2,7 +2,6 @@
   <div class='position-absolute top-0 start-50 translate-middle pt-5 mt-5 d-flex'id='login-sign'>
     <h2 class='mt-5'>Log in</h2>
   </div>
-
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="position-relative position-absolute top-50 start-50 translate-middle mt-2">
       <div class="form-inputs">
@@ -16,9 +15,8 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
     </div>
-
     <div class="form-actions position-absolute top-100 start-50 translate-middle pb-5">
-      <a id='login-btn' href="#"><%= f.button :submit, "Log in" %></a>
+      <%= f.button :submit, "Log in", id:'login-btn' %>
     </div>
   <% end %>
 </div>

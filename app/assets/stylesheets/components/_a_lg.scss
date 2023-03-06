@@ -9,3 +9,16 @@
 .border-lg:hover a {
   color: black;
 }
+
+.link-ai a {
+  color: white;
+  transition: ease 0.6s all;
+  text-decoration: none;
+}
+
+.link-ai a:hover {
+  color: red;
+  span {
+    color: #FACF39;
+  }
+}
