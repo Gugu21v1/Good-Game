@@ -59,6 +59,9 @@
     <div class="card card-lg card-body">
       <div class="card-lg-body">
         <% @products.each do |product| %>
+          <div class="a-delete">
+            <%= button_to '<i class="fas fa-trash"></i>'.html_safe, product, method: :delete if policy(product).destroy? %>
+          </div>
           <%= link_to product_path(product) do %>
             <div class="card-lg-2 m-4">
               <div class="imgBox">

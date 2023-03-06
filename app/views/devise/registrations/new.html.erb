@@ -1,10 +1,8 @@
 <div class='position-absolute top-0 start-50 translate-middle pt-5 mt-5 d-flex'id='big-sign'>
   <h2 class='mt-3'>Sign up</h2>
 </div>
-
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
-
   <div class="position-relative position-absolute top-50 start-50 translate-middle mt-2">
     <div class="form-inputs ">
       <div class="email-box">
@@ -36,12 +34,9 @@
                     required: true,
                     input_html: { autocomplete: "new-password" } %>
       </div>
-  </div>
-
-  <div class="form-actions position-absolute top-100 start-50 translate-middle pb-5">
-
-    <a id='submit-btn' href="#"><%= f.button :submit, "Sign up" %></a>
-    <%= render "devise/shared/links", class: "login-btn" %>
-
-  </div>
-<% end %>
+    </div>
+    <div class="form-actions position-absolute top-100 start-50 translate-middle pb-5">
+      <a id='submit-btn' href="#"><%= f.button :submit, "Sign up" %></a>
+      <%= render "devise/shared/links", class: "login-btn" %>
+    </div>
+  <% end %>
