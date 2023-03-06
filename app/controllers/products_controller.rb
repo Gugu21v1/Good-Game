@@ -44,7 +44,7 @@ class ProductsController < ApplicationController
     authorize @product
     @product.destroy
 
-    redirect_to root_path, status: :see_other
+    redirect_to user_path(@product.user_id), status: :see_other
   end
 
   private
