@@ -1,7 +1,11 @@
 <div class="luiz-css">
   <div class="container text-center mt-5 card-lg">
     <div class="mb-4">
-      <%= cl_image_tag @user.user_url.key, class:"avatar" %>
+      <% if current_user.user_url.key != nil %>
+        <%= cl_image_tag current_user.user_url.key, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <% else %>
+        <%= image_tag 'profile.png', crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <% end %>
     </div>
     <h3><%= @user.name %></h3>
     <hr>
@@ -24,18 +28,18 @@
     </div>
   </div>
   <!--
-
 <%# Email do usuario dono desta conta %>
-<%= @user.email %>
-<br>
-<br>
+ <%= @user.email %>
+
+<br><br>
 <%# Iterando sobre os produtos do usuario %>
 <% @products.each do |product| %>
   <%= link_to product.name, product_path(product) %>
   <br>
 <% end %>
-<br>
-<br>
+
+<br><br>
+
 <%# Verificando se o usuario atual é o dono da conta. %>
 <% if policy(@user).edit? %>
   <%= link_to "Edit this user", edit_user_registration_path(@user) %>
@@ -55,15 +59,18 @@
     <div class="card card-lg card-body">
       <div class="card-lg-body">
         <% @products.each do |product| %>
+          <div class="a-delete">
+            <%= button_to '<i class="fas fa-trash"></i>'.html_safe, product, method: :delete if policy(product).destroy? %>
+          </div>
           <%= link_to product_path(product) do %>
             <div class="card-lg-2 m-4">
               <div class="imgBox">
                 <%= cl_image_tag product.product_url[0].key, class: "img-product", crop: :fill%>
               </div>
-              <div class="contentBox">
+              <div class="contentBox text-center">
                 <h2><%= product.name %></h2>
                 <h3 class="price"> US$<%= product.price %> </h3>
-                <%= link_to "Buy Now", product_path(product), class: 'buy' %>
+                <%= link_to "See More", product_path(product), class: 'buy' %>
               </div>
             </div>
             <br>
