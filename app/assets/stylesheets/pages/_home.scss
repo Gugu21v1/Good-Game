@@ -19,25 +19,39 @@
   margin-left: 10em;
 }
 
-//box-sizing: border-box;
-//font-family: 'Lato', sans-serif;
+.jt .home_title {
+  display: flex;
+  margin-left: 3em;
+
+}
+
+.jt .home_title i {
+  width: 30px;
+  height: 30px;
+  margin-top: 1em;
+}
 
 .jt .wrapper {
-  display:flex;
-  width: 70%;
+  display: flex;
+  text-align: center;
+  margin: auto auto;
+  min-width: 70%;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .jt .card {
-  width: 280px;
+  min-width: 280px;
   height: 360px;
   padding: 2rem 1rem;
   background: #fff;
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
   transition: 0.5s ease-in-out;
+  margin: 10px 5px;
+  flex-wrap: wrap;
 }
 
 .jt .card:hover {
@@ -57,7 +71,6 @@
   transition: 0.5s all;
   opacity:0;
 }
-
 
 .jt .card:hover:before {
   opacity: 1;
@@ -98,6 +111,7 @@
 }
 
 .jt .card .info .btn{
+  margin-top: 2em;
   text-decoration: none;
   padding: 0.5rem 1rem;
   background: #fff;
