@@ -1,7 +1,5 @@
 <!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://c4.wallpaperflare.com/wallpaper/821/540/865/artwork-fantasy-art-wallpaper-preview.jpg');">
 -->
-
-
 <div id="myCarousel" class="carousel slide" data-bs-ride="true">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -11,33 +9,33 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://images.unsplash.com/photo-1544484647-725cbadff6cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="d-block w-100" alt="...">
-        <div class="container-jt">
-          <h1>Get to know the products available</h1>
-          <p> The best products are right here. Click on the buttom bellow so you can find out what is available.</p>
-          <a href= "#" class= "btn btn-lg btn-primary">
-            Shop Now!
-          </a>
-        </div>
+      <div class="container-jt">
+        <h1>Get to know the products available</h1>
+        <p> The best products are right here. Click on the buttom bellow so you can find out what is available.</p>
+        <a href= "#" class= "btn btn-lg btn-primary">
+          Shop Now!
+        </a>
+      </div>
     </div>
     <div class="carousel-item">
       <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" class="d-block w-100" alt="...">
-        <div class="container-jt">
-          <h1>Get to know the products available</h1>
-          <p> The best products are right here. Click on the buttom bellow so you can find out what is available.</p>
-          <a href= "#" class= "btn btn-lg btn-primary">
-            Shop Now!
-          </a>
-        </div>
+      <div class="container-jt">
+        <h1>Get to know the products available</h1>
+        <p> The best products are right here. Click on the buttom bellow so you can find out what is available.</p>
+        <a href= "#" class= "btn btn-lg btn-primary">
+          Shop Now!
+        </a>
+      </div>
     </div>
     <div class="carousel-item">
       <img src="https://images.unsplash.com/photo-1591196702597-062a87208fed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="d-block w-100" alt="...">
-        <div class="container-jt">
-          <h1>Get to know the products available</h1>
-          <p> The best products are right here. Click on the buttom bellow so you can find out what is available.</p>
-          <a href= "#" class= "btn btn-lg btn-primary">
-            Shop Now!
-          </a>
-        </div>
+      <div class="container-jt">
+        <h1>Get to know the products available</h1>
+        <p> The best products are right here. Click on the buttom bellow so you can find out what is available.</p>
+        <a href= "#" class= "btn btn-lg btn-primary">
+          Shop Now!
+        </a>
+      </div>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -49,126 +47,102 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
 <br>
 <br>
-
 <div class="jt">
   <div class= "home_title">
     <i class="fa-solid fa-bars"></i>
     <h1>Departments</h1>
   </div>
 </div>
-
 <br>
 <br>
-
 <div class="jt">
   <div class="wrapper">
     <div class="card">
       <img src="https://images.unsplash.com/photo-1656789683996-602a5d669e82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z2FtZSUyMGNvbnNvbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
       <div class="info">
-        <h1>Consoles</h1>
+        <h1 class="products-types">Consoles</h1>
         <p></p>
-        <a href="#" class="btn">Look up</a>
+        <%= link_to 'Look up', console_page_path(params[:type] = 'Console'), class:"btn" %>
       </div>
     </div>
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1656787346248-36bb5ed8f9e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80">
       <div class="info">
-        <h1>Games</h1>
+        <h1 class="products-types">Games</h1>
         <p></p>
-        <a href="#" class="btn">Look up</a>
+        <%= link_to 'Look up', console_page_path(params[:type] = 'Games'), class:"btn" %>
       </div>
     </div>
-
     <div class="card">
       <img src="https://images.unsplash.com/photo-1592840496694-26d035b52b48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z2FtZSUyMGNvbnRyb2xsZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
       <div class="info">
-        <h1>Accessories</h1>
+        <h1 class="products-types">Accessories</h1>
         <p></p>
-        <a href="#" class="btn">Look up</a>
+        <%= link_to 'Look up', console_page_path(params[:type] = 'Accessories'), class:"btn" %>
       </div>
     </div>
-
   </div>
 </div>
-
 <br>
 <br>
-
-
-
-
-
-
-
-
-
-
-
-
 <!--<div class="container">
-  <div class="row">
-      <div class="col-4">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1656789683996-602a5d669e82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z2FtZSUyMGNvbnNvbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="card-img-top-jt" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1577741314755-048d8525d31e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="card-img-top-jt" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1656787346248-36bb5ed8f9e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" class="card-img-top-jt" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
+<div class="row">
+  <div class="col-4">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1656789683996-602a5d669e82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z2FtZSUyMGNvbnNvbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="card-img-top-jt" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
-
-
-<!-- <div class="card-jt-body">
-        <% @products.each do |product| %>
-          <%= link_to product_path(product) do %>
-            <div class="card-jt-2 m-4">
-              <div class="imgBox">
-                <%= cl_image_tag product.product_url[0].key, class: "img-product", crop: :fill%>
-              </div>
-              <div class="contentBox">
-                <h2><%= product.name %></h2>
-                <h3 class="price"> US$<%= product.price %> </h3>
-                <%= link_to "Buy Now", product_path(product), class: 'buy' %>
-              </div>
-            </div>
-            <br>
-          <% end %>
-        <% end %>
+  <div class="col-4">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1577741314755-048d8525d31e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="card-img-top-jt" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1656787346248-36bb5ed8f9e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" class="card-img-top-jt" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
 </div>
-
-
+</div>
+<!-- <div class="card-jt-body">
+<% @products.each do |product| %>
+  <%= link_to product_path(product) do %>
+    <div class="card-jt-2 m-4">
+      <div class="imgBox">
+        <%= cl_image_tag product.product_url[0].key, class: "img-product", crop: :fill%>
+      </div>
+      <div class="contentBox">
+        <h2><%= product.name %></h2>
+        <h3 class="price"> US$<%= product.price %> </h3>
+        <%= link_to "Buy Now", product_path(product), class: 'buy' %>
+      </div>
+    </div>
+    <br>
+  <% end %>
+<% end %>
+</div>
 <%# @users são todos os usuarios. %>
-    <%# @products.each do |user| %>
-      <%#<br>
+<%# @products.each do |user| %>
+  <%#<br>
   <%#= link_to user.name, user_path(user) %>
-      <%# end %>
-      <%# @users.each do |user| %>
-        <%#= link_to user.email, user_path(user) %>
-        <%# end %>
+  <%# end %>
+  <%# @users.each do |user| %>
+    <%#= link_to user.email, user_path(user) %>
+    <%# end %>

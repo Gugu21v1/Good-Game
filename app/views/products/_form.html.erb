@@ -2,7 +2,7 @@
   <%= f.input :name %>
   <%= f.input :details %>
   <%= f.input :price %>
-  <%= f.input :console, :collection => %w[PC PS4 PS5 Xbox-one] %>
+  <%= f.input :console, :collection => %w[Console Games Accessories] %>
   <%= f.input :product_url, as: :file, input_html: { multiple: true } %>
   <%= f.submit %>
 <% end %>

@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   delete 'products/:id', to: 'products#destroy', as: 'delete'
   devise_for :users
   resources :products
+  get 'products/consoles/:type', to: 'products#index', as: 'console-page'
 end
