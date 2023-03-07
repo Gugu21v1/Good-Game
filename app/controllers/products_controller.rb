@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @user = User.find(@product.user_id)
+    @user = User.find(@product.users_id)
     authorize @product
   end
 
@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
   def create
     @user = User.find(current_user.id)
     @product = Product.new(product_params)
-    @product.user_id = current_user.id
+    @product.users_id = current_user.id
     authorize @product
     if @product.save
       redirect_to product_path(@product)
@@ -44,12 +44,12 @@ class ProductsController < ApplicationController
     authorize @product
     @product.destroy
 
-    redirect_to user_path(@product.user_id), status: :see_other
+    redirect_to user_path(@product.users_id), status: :see_other
   end
 
   private
 
   def product_params
-    params.require(:product).permit(:name, :details, :description, :price, :console, :user_id, product_url: [])
+    params.require(:product).permit(:name, :details, :description, :price, :console, :users_id, product_url: [])
   end
 end

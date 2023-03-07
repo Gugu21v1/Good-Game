@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @products = Product.where(user_id: @user.id)
+    @products = Product.where(users_id: @user.id)
     authorize @user
     authorize @products
   end
