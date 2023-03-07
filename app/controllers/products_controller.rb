@@ -4,8 +4,8 @@ class ProductsController < ApplicationController
   def index
     @products = policy_scope(Product.where(console: params[:type]))
     @all_products = policy_scope(Product)
+    @lista = []
     if params[:query]
-      @lista = []
       pesquisa_separada = params[:query].upcase.split
       pesquisa_separada.each do |palavra|
         p palavra
