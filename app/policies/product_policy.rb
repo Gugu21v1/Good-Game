@@ -22,6 +22,6 @@ class ProductPolicy < ApplicationPolicy
 
   def destroy?
     product = Product.find(record.id)
-    product.user_id == user.id
+    product.users_id == user.id
   end
 end
