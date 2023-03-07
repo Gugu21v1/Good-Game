@@ -1,17 +1,39 @@
-<div class="container">
-  <h1> <%=@product.name%> </h1>
-  <div class ="row">
-    <div class="col-6">
-      <h2>Product Photo</h2>
-      <% @product.product_url.each do |image| %>
-        <%= cl_image_tag(image.key, height: 300) %>
+<div class="card-lg-body-show-products">
+  <div class="container">
+    <h1 class="product-name text-center mt-2"> <%= @product.name %> </h1>
+    <div class ="row">
+      <div class="col-6">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner rounded-5">
+            <% @product.product_url.each do |image| %>
+              <div class="carousel-item active">
+                <%= cl_image_tag(image.key, crop: :fill, class:'d-block w-100 h-100 rounded-5') %>
+                <br>
+              </div>
+            <% end %>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-6 my-flex">
         <br>
-      <% end %>
-    </div>
-    <div class="col-6">
-      <p>Product Details</p>
-      <h2><%=@product.price %></h2>
-      <h2></h2>
+        <div class="details text-center">
+          <h1>Product Details</h1>
+          <h3><%= @product.details %></h3>
+        </div>
+        <br>
+        <div class="price text-center">
+          <h1>Price</h1>
+          <h3>US$<%= @product.price %></h3>
+        </div>
+      </div>
     </div>
   </div>
 </div>
