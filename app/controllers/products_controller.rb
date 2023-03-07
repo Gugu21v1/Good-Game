@@ -4,7 +4,25 @@ class ProductsController < ApplicationController
   def index
     @products = policy_scope(Product.where(console: params[:type]))
     @all_products = policy_scope(Product)
-
+    if params[:query]
+      pesquisa_separada = params[:query].split
+      pesquisa_separada_tamanho = pesquisa_separada.size
+      p pesquisa_separada.first
+      case pesquisa_separada_tamanho
+      when 1
+        @searched_products = policy_scope(Product.where("products.name ILIKE :query
+          OR products.details ILIKE :query OR products.console ILIKE :query", query: "%#{pesquisa_separada.first}%"))
+      when 2
+        @searched_products = policy_scope(Product.where("products.name ILIKE :query1
+          OR products.details ILIKE :query1 OR OR products.console ILIKE :query1 products.name ILIKE :query2 OR products.console ILIKE :query2
+          OR products.details ILIKE :query2", query1: "%#{pesquisa_separada[0]}%", query2: "%#{pesquisa_separada[1]}%"))
+      when 3
+        @searched_products = policy_scope(Product.where("products.name ILIKE :query1
+          OR products.details ILIKE :query1 OR products.console ILIKE :query1 OR products.name ILIKE :query2 OR products.console ILIKE :query2
+          OR products.details ILIKE :query2 OR products.name ILIKE :query3 OR products.console ILIKE :query3
+          OR products.details ILIKE :query3", query1: "%#{pesquisa_separada[0]}%", query2: "%#{pesquisa_separada[1]}%", query3: "%#{pesquisa_separada[2]}%"))
+      end
+    end
   end
 
   def show

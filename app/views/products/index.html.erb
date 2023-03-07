@@ -1,6 +1,8 @@
 <div class="luiz-css">
   <div class="card card-lg card-body rounded-0">
-    <% if params[:type] == "Games" %>
+    <% if params[:query] != nil %>
+      <% @products = @searched_products %>
+    <% elsif params[:type] == "Games" %>
       <h1 class="container text-center type-title mt-3">Games</h1>
     <% elsif params[:type] == "Console" %>
       <h1 class="container text-center type-title mt-3">Consoles</h1>
