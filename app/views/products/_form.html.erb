@@ -1,8 +1,10 @@
-<%= simple_form_for(product) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :details %>
-  <%= f.input :price %>
-  <%= f.input :console, :collection => %w[Console Games Accessories] %>
-  <%= f.input :product_url, as: :file, input_html: { multiple: true } %>
-  <%= f.submit %>
-<% end %>
+<div class="form-lg">
+  <%= simple_form_for(product) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :details %>
+    <%= f.input :price %>
+    <%= f.input :console, :collection => %w[Console Games Accessories] %>
+    <%= f.input :product_url, as: :file, input_html: { multiple: true } %>
+    <div class="button-submit"><%= f.submit %></div>
+  <% end %>
+</div>
