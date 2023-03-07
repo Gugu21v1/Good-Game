@@ -13,22 +13,26 @@
       <% @products = @all_products %>
     <% end %>
     <div class="card-lg-body">
-      <% @products.each do |product| %>
-        <div class="a-delete">
-        </div>
-        <%= link_to product_path(product) do %>
-          <div class="card-lg-2 m-4">
-            <div class="imgBox">
-              <%= cl_image_tag product.product_url[0].key, class: "img-product", crop: :fill%>
-            </div>
-            <div class="contentBox text-center">
-              <h2><%= product.name %></h2>
-              <h3 class="price"> US$<%= product.price %> </h3>
-              <%= link_to "See More", product_path(product), class: 'buy' %>
-            </div>
+      <%= if @products %>
+        <% @products.each do |product| %>
+          <div class="a-delete">
           </div>
-          <br>
+          <%= link_to product_path(product) do %>
+            <div class="card-lg-2 m-4">
+              <div class="imgBox">
+                <%= cl_image_tag product.product_url[0].key, class: "img-product", crop: :fill%>
+              </div>
+              <div class="contentBox text-center">
+                <h2><%= product.name %></h2>
+                <h3 class="price"> US$<%= product.price %> </h3>
+                <%= link_to "See More", product_path(product), class: 'buy' %>
+              </div>
+            </div>
+            <br>
+          <% end %>
         <% end %>
+      <% else %>
+        <h1>No products match with your search</h1>
       <% end %>
     </div>
   </div>
