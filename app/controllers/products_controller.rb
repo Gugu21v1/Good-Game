@@ -2,14 +2,14 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: %I[show index]
 
   def index
-    @products = policy_scope(Product)
+    @products = policy_scope(Product.where(console: params[:type]))
   end
 
   def show
     @product = Product.find(params[:id])
     @user = User.find(@product.user_id)
     authorize @product
-   end
+  end
 
   def new
     @product = Product.new
