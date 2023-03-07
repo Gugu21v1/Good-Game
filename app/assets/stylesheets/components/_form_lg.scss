@@ -1,0 +1,32 @@
+.form-lg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+
+  label {
+    text-align: center;
+    font-size: 20px;
+    margin: 3px auto;
+    width: 100%;
+  }
+
+  input, textarea, select {
+    border-radius: 15px;
+    margin: auto auto;
+    width: 80%;
+  }
+
+  abbr {
+    opacity: 0;
+  }
+
+  .button-submit input {
+    width: 100%;
+    padding: 10px 10px;
+    background-color: $my-yellow;
+    font-weight: 700;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+}

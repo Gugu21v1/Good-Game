@@ -3,6 +3,8 @@ class ProductsController < ApplicationController
 
   def index
     @products = policy_scope(Product.where(console: params[:type]))
+    @all_products = policy_scope(Product)
+
   end
 
   def show
