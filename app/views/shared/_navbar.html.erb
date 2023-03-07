@@ -9,11 +9,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <div class="start me-5">
-          <li class="nav-item mt-2 me-5">
-            <%= form_with url: products_path, method: :get, class: "d-flex me-5" do %>
+        <div class=" me-5">
+          <li class="nav-item mt-2">
+            <%= form_with url: products_path, method: :get, class: "d-flex" do %>
               <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a product" %>
-              <%= submit_tag "Search", class: "btn btn-primary me-1" %>
+              <%= submit_tag "Search", class: "btn btn-primary me-1 button-submit" %>
             <% end %>
           </li>
         </div>
