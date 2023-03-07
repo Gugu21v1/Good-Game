@@ -24,7 +24,7 @@
           <li class="nav-item mt-2 me-2">
             <%= link_to "Profile", user_path(current_user), class: "nav-link" %>
           </li>
-          <li class="nav-item link-ai mt-3 me-3">
+          <li class="nav-item link-ai mt-3 me-3 text-center">
             <%= link_to "New Product", new_product_path if policy(User).new? %>
           </li>
           <li class="nav-item dropdown">

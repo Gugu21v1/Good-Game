@@ -1,0 +1,31 @@
+.product-name {
+  font-size: 60px;
+  font-family: 'Genos', sans-serif;
+}
+
+.card-lg-body-show-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #212121;
+  border-radius: 15px;
+  width: 100%;
+  color: $my-yellow;
+}
+
+.card-lg-body-show-products h1 {
+  color: white;
+}
+
+.my-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.details {
+  word-break: break-all;
+}
