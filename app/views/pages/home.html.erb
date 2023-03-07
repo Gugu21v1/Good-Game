@@ -62,25 +62,25 @@
     <div class="card">
       <img src="https://images.unsplash.com/photo-1656789683996-602a5d669e82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z2FtZSUyMGNvbnNvbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
       <div class="info">
-        <h1>Consoles</h1>
+        <h1 class="products-types">Consoles</h1>
         <p></p>
-        <a href="#" class="btn">Look up</a>
+        <%= link_to 'Look up', console_page_path(params[:type] = 'Console'), class:"btn" %>
       </div>
     </div>
     <div class="card">
       <img src="https://images.unsplash.com/photo-1656787346248-36bb5ed8f9e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80">
       <div class="info">
-        <h1>Games</h1>
+        <h1 class="products-types">Games</h1>
         <p></p>
-        <a href="#" class="btn">Look up</a>
+        <%= link_to 'Look up', console_page_path(params[:type] = 'Games'), class:"btn" %>
       </div>
     </div>
     <div class="card">
       <img src="https://images.unsplash.com/photo-1592840496694-26d035b52b48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z2FtZSUyMGNvbnRyb2xsZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
       <div class="info">
-        <h1>Accessories</h1>
+        <h1 class="products-types">Accessories</h1>
         <p></p>
-        <a href="#" class="btn">Look up</a>
+        <%= link_to 'Look up', console_page_path(params[:type] = 'Accessories'), class:"btn" %>
       </div>
     </div>
   </div>
